@@ -7,21 +7,9 @@ html, body {
     
     background-color: rgb(54, 54, 54);
     color: white;
-    padding: 0.1rem;
+    padding: 1rem;
     text-align: center;
-    font-size: 40px;
-}
-.music
-{
-    font-family: cursive;
-    text-align: center;
-    font-size: 50px;
-}
-.merch
-{
-    font-family: cursive;
-    text-align: center;
-    font-size: 50px;
+    font-size: 60px;
 }
 .album1
 {

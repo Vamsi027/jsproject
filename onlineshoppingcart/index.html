@@ -5,17 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>The Generics Store</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="script.js" defer></script>
     </head>
     <body>
-        
         <div class="logo">
-            <p style="font-size: 15px;">STORE</p>
-            <hr>
             <h1>The Generics</h1>
         </div>
-        <div class="music">
-            <h6>Music</h6>
+
+        <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="store.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Store</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        
+        <div>
+            <h6 style="font-size: 50px; font-family: cursive; text-align: center;">Music</h6>
         </div>
         <div class="albums">
             <table class="tbl">
@@ -32,13 +49,13 @@
                     <th class="album1">Album 4</th>
                     </thead>
                     <tbody>
-                        <td> <img src="https://yasheccomerce.blob.core.windows.net/ecommerce/Album%203.png"><p>$9.99 <button class="btn">Add to cart</button></p></img></td>
-                        <td><img src="https://yasheccomerce.blob.core.windows.net/ecommerce/Album%204.png"><p>$19.99 <button class="btn">Add to cart</button></p></img></td>
+                        <td> <img src="https://yasheccomerce.blob.core.windows.net/ecommerce/Album%203.png"><p>$9.99</p> <button class="btn" id="btn">Add to cart</button></td>
+                        <td><img src="https://yasheccomerce.blob.core.windows.net/ecommerce/Album%204.png"><p>$19.99</p> <button class="btn" id="btn">Add to cart</button></td>
                     </tbody>
             </table>
         </div>
-        <div class="merch">
-            <h6>Merch</h6>
+        <div>
+            <h6 style="font-size: 50px; font-family: cursive; text-align: center;"  >Merch</h6>
         </div>
         <div class="merchs">
             <table class="tbl">
@@ -47,10 +64,14 @@
                 <th class="album1">Coffee Cup</th>
                 </thead>
                 <tbody>
-                    <td><img src="https://yasheccomerce.blob.core.windows.net/ecommerce/Shirt.png"></img><p>$19.99 <button class="btn">Add to cart</button></p></td>
+                    <td><img src="https://yasheccomerce.blob.core.windows.net/ecommerce/Shirt.png"></img><p>$19.99</p> <button class="btn">Add to cart</button></td>
                     <td><img src="https://yasheccomerce.blob.core.windows.net/ecommerce/Cofee.png"></img><p>$6.99 <button class="btn">Add to cart</button></p></td>
                 </tbody>
             </table>
+        </div>
+        <div class="cart">
+            <h6 style="font-size: 50px; font-family: cursive; text-align: center;">Cart</h6>
+            <pre style="text-align: center;font-size: 30px; font-family: cursive;">Item                                Price                                    Quantity</pre>
         </div>
         <div class="purchase">
             <button class="btn">Purchase</button>

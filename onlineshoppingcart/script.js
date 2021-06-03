@@ -1,7 +1,30 @@
-var butn=document.getElementById("btn")
+var btn=document.querySelectorAll("button")
 
-
-butn.addEventListener("click",()=>{
+btn.addEventListener('click', (e) => {
+    addToCart(e.currentTarget)
+  })
+  
+  const addToCart = (product) => {
+    const productId = $(product).attr('productId');
+    const isAlreadyInCart = $.grep(productsInCart, el => {return el.id == productId}).length;
+  
+    if (isAlreadyInCart) {
+      $.each(storageData, (i, el) => {
+        if (productId == el.id) {
+          el.itemsNumber += 1;
+        }
+      })
+    } else {
+      const newProduct = {
+        id: Number(productId),
+        itemsNumber: 1
+      }
+  
+      storageData.push(newProduct);
+    }
+  
+  }
+btn.addEventListener("click",()=>{
     createNotification();
 })
 
@@ -9,7 +32,7 @@ function createNotification()
 {
     const notif=document.createElement("div");
     notif.classList.add("toast")
-    notif.innerText="This is good practice";
+    notif.innerText="Product added to cart";
     container.appendChild(notif);
     setTimeout(()=>{
         notif.remove();
