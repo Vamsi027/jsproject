@@ -1,15 +1,21 @@
 const express=require('express')
+const bodyParser=require('body-parser');
 
 const app=express();
 
-app.use((req,res,next)=>{
-    console.log('In the middleware')
-    next();
+app.use(bodyParser.urlencoded());
+
+app.use('/addprod',(req,res,next)=>{
+    res.send('<form action="/product" method="POST"><input type="text" name="title"><br><input type="number" name="size"><br><button type="submit">Add book</button></form>')
 });
 
-app.use((req,res,next)=>{
-     console.log('In another middleware')
-     res.send('<h1>Welcome to Express</h1>')
+app.post('/product',(req,res,next)=>{
+    console.log(req.body);
+    res.redirect('/')
+});
+
+app.use('/',(req,res,next)=>{
+    res.send('<h1>Welecome</h1>')
 });
 
 
