@@ -1,17 +1,21 @@
 const rootDir=require('../util/path')
 const path=require('path')
+const Product=require('../model/product')
 
 exports.getAddProduct=(req,res,next)=>{
     res.sendFile(path.join(rootDir,'views','addproduct.html'))
 }
 
 exports.postAddProduct=(req,res,next)=>{
-    console.log(req.body);
+    const product=new Product(req.body.title)
+    product.save();
     res.redirect('/shop')
 }
 
 exports.getProducts=(req,res,next)=>{
+    Product.fetchAll(products=>{
     res.sendFile(path.join(rootDir,'views','shop.html'))
+    });
 }
 
 exports.getContactUs=(req,res,next)=>{
