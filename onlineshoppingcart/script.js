@@ -1,4 +1,8 @@
-var btn=document.querySelectorAll("button")
+var btn=document.querySelector("button")
+
+btn.addEventListener('click',()=>{
+  alert('lol')
+})
 
 btn.addEventListener('click', (e) => {
     addToCart(e.currentTarget)
